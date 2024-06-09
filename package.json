@@ -21,7 +21,6 @@
   "homepage": "https://github.com/maxiperellon/api-en-cpanel#readme",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "mysql2": "^3.10.0"
+    "express": "^4.19.2"
   }
 }
