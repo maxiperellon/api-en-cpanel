@@ -3,15 +3,11 @@ const express = require('express');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
-
-app.use(express.json());
-
-app.get('/', (req, res) => {
-    res.send("api")
+app.get('/*', function (req, res) {
+	  res.send('¡Estoy andando!, node version: ' + process.versions.node + ' , ruta pedida: ' + req.url + ', NODE_ENV: ' + process.env.NODE_ENV);
 });
-
-app.listen(port, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
+app.listen(port, function () {
+	  console.log(`Aplicación de pruebas escuchando en el puerto ${port}!`);
 });
